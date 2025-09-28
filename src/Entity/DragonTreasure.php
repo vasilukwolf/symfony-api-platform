@@ -8,7 +8,11 @@ use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
 
 #[ORM\Entity(repositoryClass: DragonTreasureRepository::class)]
-#[ApiResource]
+
+#[ApiResource(
+    description: 'A rare and valuable treasure.'
+)]
+
 class DragonTreasure
 {
     #[ORM\Id]
