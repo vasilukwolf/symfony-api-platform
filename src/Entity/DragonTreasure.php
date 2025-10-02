@@ -6,11 +6,25 @@ use App\Repository\DragonTreasureRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Delete;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
 
 #[ORM\Entity(repositoryClass: DragonTreasureRepository::class)]
 
 #[ApiResource(
-    description: 'A rare and valuable treasure.'
+    description: 'A rare and valuable treasure.',
+    shortName: 'Treasure',
+    operations: [
+        new Get(),
+        new GetCollection(),
+        new Post(),
+        new Put(),
+        new Patch(),
+    ]
 )]
 
 class DragonTreasure
