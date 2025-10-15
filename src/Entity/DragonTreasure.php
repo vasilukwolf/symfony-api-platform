@@ -39,7 +39,15 @@ use function Symfony\Component\String\u;
     denormalizationContext:[
         'groups' => ['treasure:write'], 
     ],
-     paginationItemsPerPage: 10
+    paginationItemsPerPage: 10,
+    
+    formats: [
+        'jsonld',
+        'json',
+        'html',
+        'jsonhal',
+        'csv' => 'text/csv',
+    ],
 
 
 )]
