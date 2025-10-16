@@ -17,6 +17,5 @@ class AppFixtures extends Fixture
                 'owner' => UserFactory::random(),
             ];
         });
-
     }
 }
