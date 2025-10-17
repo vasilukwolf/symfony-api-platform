@@ -59,7 +59,7 @@ use function Symfony\Component\String\u;
 
 #[ApiFilter(PropertyFilter::class)]
 #[ApiFilter(SearchFilter::class, properties: [
-    'owner.userqname' => 'partial',
+    'owner.username' => 'partial',
 ])]
 class DragonTreasure
 {
